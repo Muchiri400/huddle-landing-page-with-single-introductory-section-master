@@ -5,61 +5,64 @@
 body{
     background-image: url('images/bg-desktop.svg');
     background-repeat: no-repeat;
-    background-repeat: cover;
-    min-height: 100vh;
+    background-position: center;
     background-color: hsl(257, 40%, 49%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     color: white;
 }
-h1{
-    font-family:'Poppins', sans-serif;;
-}
-img{
-    max-width: 100%;
-}
-p{
-    opacity: 0.8;
-}
+.header {
+    margin: 50px 0px 60px 100px;
+  }
 .container{
-    width: 1200px;
-    max-width: 100%;
-    margin: auto;
-}
-.flex{
     display: flex;
-    margin: 50px 0;
+    margin: 0 100px;
 }
-.flex > div{
-     flex: 1;
+.illustration-mockup{
+    width: 100%;
 }
-.flex > div:first-child{
-    margin-right: 20px;
+.intro{
+    flex-shrink: 1.6;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-left: 50px;
 }
-.flex > div:last-child{
-    margin-left: 20px;
+.intro__header{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px; 
+}
+.intro__register{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: hsl(257, 40%, 49%);
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 5px 5px 10px hsl(257, 41%, 34%);
+  padding: 15px 20px 15px 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.intro__register:hover{
+    color: white;
+    background-color: blueviolet;
+}
 
-}
-button{
-    background-color: white;
-    color: hsl(257, 40%, 49%);
-    padding: 20px 80px;
-    border: none;
-    border-radius: 50px;
-    font-size: 24px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-
+.footer{
+    margin-top: 25px;
+    margin-right: 100px;
 }
 .social-links{
-    padding: 0;
-    list-style-type: none;
     display: flex;
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.social-links a{
+.social-link{
     color: white;
     height: 50px;
     width: 50px;
@@ -71,22 +74,33 @@ button{
     text-decoration: none;
     margin-left: 20px;
 }
-@media screen and (max-width: 768px)  {
-    .flex{
+.social-link:hover{
+    background-color: blueviolet;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: #ffffff;
+  }
+
+@media all and (max-width: 1030px) {
+    body {
+      background: hsl(257, 40%, 49%) url('images/bg-mobile.svg');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+    }
+    .header-logo {
+        width: 40%;
+      }
+    .container {
         flex-direction: column;
-        margin: 50px 0;
-    }
-    .flex > div:first-child{
-        flex: 1;
-        margin-right: 0;
-    }
-    .flex > div:last-child{
-        flex: 1;
-        margin-left: 0;
+        margin: 0 50px;
         text-align: center;
     }
-    .social-links{
-        justify-content: center;
-    }
-    
+    .intro {
+        margin-left: 0px;
+      }
 }
