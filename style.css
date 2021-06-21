@@ -6,6 +6,7 @@ body{
     background-image: url('images/bg-desktop.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-color: hsl(257, 40%, 49%);
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
@@ -22,7 +23,7 @@ body{
     width: 100%;
 }
 .intro{
-    flex-shrink: 1.6;
+    flex-shrink: 2;
     line-height: 1.5;
     margin-top: 0;
     margin-left: 50px;
@@ -85,7 +86,7 @@ body{
     color: #ffffff;
   }
 
-@media all and (max-width: 1030px) {
+@media all and (max-width: 768px) {
     body {
       background: hsl(257, 40%, 49%) url('images/bg-mobile.svg');
       background-repeat: no-repeat;
@@ -103,4 +104,16 @@ body{
     .intro {
         margin-left: 0px;
       }
-}
+      p{
+          text-align: center;
+      }
+      .footer {
+        margin-top: 75px;
+        margin-right: 0px;
+      }
+      .social-links {
+        justify-content: center;
+      }
+    }
+    
+
